@@ -10,21 +10,6 @@ ClipStyleFace consists of three modules: a deformable surface model for geometry
 a compact parameter space for texture transformation, and directional CLIP losses for semantic alignment
 and domain correction.
 
-## Getting Started
-
-For all the methods described in the paper, it is required to have:
-
-- Anaconda
-- PyTorch >=1.7.1
-- Packages from requirements.txt
-
-### Notes
-
-Here, the code relies on the [Rosinality](https://github.com/rosinality/stylegan2-pytorch/) pytorch implementation of StyleGAN2.
-Some parts of the StyleGAN implementation were modified, so that the whole implementation is native pytorch. 
-
-In addition to the requirements mentioned before, a pretrained StyleGAN2 generator will attempt to be downloaded with script *download.py*.
-
 ### Dependencies
 
 Our model built on pytorch 1.9.0+ cu111, python 3.8, pytorch3d 0.7.1
@@ -39,8 +24,11 @@ and put them in the 'pretrained/StyleGAN2'
 You can download the face dataset from [[FFHQ](https://github.com/NVlabs/ffhq-dataset)]
 or generate your own dataset from the pretrained StyleGANs.
 Then use [[DECA](https://github.com/yfeng95/DECA)] to extract their 3D obj. files  with dense verts.
-Use psp encoder to extract the latent codes
+Use psp encoder [[pixel2style2pixel-master]] to extract the latent codes
 Put them into datasets/images; datasets/latents; datasets/shapes; datasets/texture
+
+the reference datasets can be downloaded from https://pan.baidu.com/s/1LseMReNHke2g8GpfiUvJNA?pwd=ns9r ns9r
+you can make your own dataset
 
 ## Model training
 
@@ -51,7 +39,8 @@ In general training could be launched by following command
 ```
 python main.py exp.config=td_single_ffhq.yaml
 ```
-Our model needs two stages of training;
+We provide batch training, i.e., trainers_multibatch_input.py and one sample training
+Our model for multibatch needs two stages of training;
 first save the images generated from the early stages
 ## Acknowledgements
 

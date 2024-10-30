@@ -1,0 +1,5 @@
+# ninja log v5
+0	8834	7359843316375026	D:/experiments3/GeoStylization/stylegan2/op/build/temp.win-amd64-cpython-38/Release/upfirdn2d.obj	71d73266fff0e168
+63	22067	7359843445030182	D:/experiments3/GeoStylization/stylegan2/op/build/temp.win-amd64-cpython-38/Release/upfirdn2d_kernel.obj	690a7c0c145c1ac0
+1	8534	7359843569820680	D:/experiments3/GeoStylization/stylegan2/op/build/temp.win-amd64-cpython-38/Release/fused_bias_act.obj	1096eab487254f2c
+66	19936	7359843683457565	D:/experiments3/GeoStylization/stylegan2/op/build/temp.win-amd64-cpython-38/Release/fused_bias_act_kernel.obj	d0a111f95ca3a956
